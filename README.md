@@ -10,3 +10,36 @@
  ##      百度提前批面试，全程只写两道题，二叉树序列化和反序列化，矩阵相乘，挂，序列化用递归没写好，矩阵相乘编译出现了错误 ，我应该现在纸上把思路想好 然后写的，直接跪。
 
 ## ##中设数字电话面试，问了几个没有答上来的问题，为什么析构函数要是虚函数，用基类类型指针绑定派生类实例,析构的时候,如果基类析构函数不是虚函数,则只会析构基类,不会析构派生类对象,从而造成内存泄漏。struct和union 的区别 ，参数传递的三种方式，我只答了按指针传递，按别名传递没有答按值传递，整型的比较和浮点型的比较有什么区别，struct和union 的区别主要是 struct 各个成员变量使用不同的内存地址，长度等于各个成员长度之和而 union使用的是同一个内存只要满足最大的成员的容量就可以，struct遵循内存对齐规则，而union由于内存空间是公用的，首地址都相同，所以只有当调用时才会对成员变量进行读写操作。 估计凉凉。
+##美团一面：凉凉 ，笔试题是找出两个字符串中第一个出现的最长对的子串，我tm的变量写错了，忘记 while循环结束后，长度还自加1了，然后就gg了 ，下面我自己写一下自己修改过后的代码；
+#include <iostream>
+#include<vector>
+#include<algorithm>
+#include<string>
+#include<queue>
+#include<stack>
+using namespace std;
+using namespace std;
+
+    int main() {
+        string s, t;
+        cin >> s; cin >> t; vector<string> ans;
+        int m = s.size(); int n = t.size();
+        int res = INT_MIN;
+        for (int i = 0; i < m; i++) {
+            int tmp = i;
+            for (int j = 0; j < n; j++) {
+                int tmp2 = j;
+                while (s[tmp] == t[tmp2] && tmp2 < n && tmp < m) { tmp++; tmp2++; }
+                ans.push_back(s.substr(i, tmp - i));
+            } 
+            res = max(res, tmp - i );
+        }          int mx = 0;
+        for (int i = 0; i < ans.size(); i++) {
+            if (ans[i].size() == res) { mx = i; break; }
+        }
+        cout << ans[mx] << endl;
+
+    }
+    ##然后是一道场景题，如何处理一千万个订单，。。。
+    ##我真tm是个垃圾。
+    
