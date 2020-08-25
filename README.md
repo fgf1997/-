@@ -42,4 +42,5 @@ using namespace std;
     }
     ##然后是一道场景题，如何处理一千万个订单，。。。
     ##我真tm是个垃圾。
+    美团面试： cookie和session的区别，hashmap了解吗，我回答成了hashtable 的数据结构，我真的是太sb了，
     
